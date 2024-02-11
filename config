@@ -1,3 +1,4 @@
-name : TeleRadioPace TV
-host : www.teleradiopace.it
-api  : https://www.teleradiopace.tv/wp-json/wp/v2
+name    : TeleRadioPace TV
+host    : www.teleradiopace.it
+api     : https://www.teleradiopace.tv/wp-json/wp/v2
+hooksec : gtiAESxkzBatBC4PPPpp2D1r
