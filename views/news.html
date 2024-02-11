@@ -1,0 +1,14 @@
+<article class="vs-content pg">
+    <h2>
+        @{model.title.rendered}
+    </h2>
+    <div class="meta-info">
+        Di @{model.authorName} - @{model.date}
+    </div>
+    <figure>
+        @{image(model.img, 180, null, m.slug, 'vs-img vs-round')}
+    </figure>
+    <section>
+        @{!m.content.rendered}        
+    </section>
+</article>

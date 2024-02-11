@@ -36,6 +36,7 @@ const news = function(id){
 		function(err,resp){
 			model=resp
 			model.img=model["_embedded"]["wp:featuredmedia"][0]["media_details"]["sizes"]["medium"]["source_url"]
+			model.authorName=model["_embedded"]["author"][0]["name"]
 			me.view('news', model)
 		}
 		);
