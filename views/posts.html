@@ -2,18 +2,17 @@
     <h2>
         Articoli
     </h2>
-    <ol>
+    <ul class="vs-borderd vs-list">
         @{foreach var m in model.data}
             <li>
                 <h2>@{!m.title.rendered}</h2>
                 <p>
                     @{!m.excerpt.rendered}
                     <figure>
-                        <!-- <img src="@{!m.jetpack_featured_media_url}" alt="@{m.slug}" /> -->
-                        @{image(m.jetpack_featured_media_url, 320, 180, m.slug, 'img')}
+                        @{image(m.jetpack_featured_media_url, 320, null, m.slug, 'vs-img vs-round')}
                     </figure>
                 </p>
             </li>
         @{end}
-    </ol>
+    </ul>
 </article>
