@@ -1,11 +1,17 @@
 <article class="vs-content pg">
     <h2>
+        <a href="/">
         Articoli
+        </a>
     </h2>
     <ol class="lst">
         @{foreach var m in model.data}
             <li>
-                <h2>@{!m.title.rendered}</h2>
+                <h2>
+                    <a href="/news/@{m.id}">
+                        @{!m.title.rendered}
+                    </a>
+                </h2>
                 <p>
                     @{!m.excerpt.rendered}
                     <figure>
