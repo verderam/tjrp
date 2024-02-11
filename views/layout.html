@@ -1,21 +1,23 @@
 @{nocompress all}
 <!DOCTYPE html>
 <html lang="it">
-<head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=11" />
-	<meta name="format-detection" content="telephone=no" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	@{import('meta', 'head','vs.css','default.css','favicon.ico')}
-</head>
-<body hx-boost="true">
-	@{body}
-	<footer class="ftr ac vs-container vs-padding-16 vs-light-grey">
-		&copy; TeleradiopaceTV - 
-		Testata giornalistica registrata al tribunale di Chiavari 12/90 del 14 dicembre 1990 
-		:: C.F.: 90057480106 :: P. IVA: 02149060994
-		| <a href="/">Home</a> | <a href="/posts">News</a> | <a href="/categories">Cat.</a>
-	</footer>
-	@{import('htmx.min.js','app.js')}
-</body>
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=11" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		@{import('meta', 'head','vs.css','default.css','favicon.ico')}
+	</head>
+	<body>
+		<div class="all" hx-boost="true">
+			@{body}
+			<footer class="ftr ac vs-container vs-padding-16 vs-light-grey">
+				&copy; TeleradiopaceTV - 
+				Testata giornalistica registrata al tribunale di Chiavari 12/90 del 14 dicembre 1990 
+				:: C.F.: 90057480106 :: P. IVA: 02149060994
+				| <a href="/">Home</a> | <a href="/posts">News</a> | <a href="/categories">Cat.</a>
+			</footer>
+		</div>
+		@{import('htmx.min.js','app.js')}
+	</body>
 </html>
