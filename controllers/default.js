@@ -11,7 +11,6 @@ exports.install = function() {
 	ROUTE('FILE /*.jpg', staticJpg);
 };
 
-//const BU='https://www.teleradiopace.tv/wp-json/wp/v2'
 const posts = function(){
 	console.log(CONF.api)
 	const u=CONF.api+'/posts'
@@ -30,16 +29,13 @@ const posts = function(){
 }
 const categories = function(){
 	console.log(CONF.api)
-	//const u=CONF.api+'/categories'
-	const u='https://www.pianetagenoa1893.net/wp-json/wp/v2/categories'
+	const u=CONF.api+'/categories'
+	//const u='https://www.pianetagenoa1893.net/wp-json/wp/v2/categories'
 	const me = this
 	let model = {}
 	RESTBuilder.GET(u).callback(
 		function(err,resp){
-			console.log('response from '+u+': ',resp);
-			console.log('error: ',err);
 			model.data=resp;
-			console.log('model: ',model);
 			me.view('categories', model);
 		}
 		);
