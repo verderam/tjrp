@@ -11,16 +11,16 @@ exports.install = function() {
 	ROUTE('FILE /*.jpg', staticJpg);
 };
 
-const posts = function(){
+const posts = function(req,res){
 	console.log(CONF.api)
 	const u=CONF.api+'/posts'
 	const me = this; 
 	let model = {};
 	RESTBuilder.GET(u).callback(
 		function(err,resp){
-			console.log('response from '+u+': ',resp);
-			console.log('error: ',err);
+			if (err) console.log('error: ',err);	
 			model.data=resp;
+
 			console.log('model: ',model);
 			me.view('posts', model);
 		}

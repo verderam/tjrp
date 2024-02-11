@@ -9,7 +9,7 @@
                 <p>
                     @{!m.excerpt.rendered}
                     <figure>
-                        @{image(m.jetpack_featured_media_url, 320, null, m.slug, 'vs-img vs-round')}
+                        @{image(CONF.api+'/media/'+m.featured_media, 320, null, m.slug, 'vs-img vs-round')}
                     </figure>
                 </p>
             </li>
