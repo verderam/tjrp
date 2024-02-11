@@ -2,11 +2,7 @@ exports.install = function() {
 	ROUTE('GET /');
 	ROUTE('GET /posts', posts);
 	ROUTE('GET /categories', categories);
-//	ROUTE('GET /posts/{id}/', post);	
-//	ROUTE('GET /pages', pages);
-//	ROUTE('GET /pages/{id}/', page);
 	ROUTE('+POST /up/', up, ['upload'], 1024);
-
 	ROUTE('FILE /*.txt', staticTxt);
 	ROUTE('FILE /*.jpg', staticJpg);
 };
@@ -19,6 +15,8 @@ const posts = function(req,res){
 	RESTBuilder.GET(u).callback(
 		function(err,resp){
 			for (i=0;i<resp.length;i++){
+				resp[i].img=''
+				console.log('emb: ', resp[i]["_embedded"])
 				resp[i].img=resp[i]["_embedded"]["wp:featuredmedia"][0]["media_details"]["sizes"]["thumbnail"]["source_url"]
 			}
 			if (err) console.log('error: ',err);	
