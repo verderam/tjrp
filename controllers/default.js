@@ -91,7 +91,7 @@ const _mods = function(req, res){
 		  process.exit(1)
 		} else {
 		  console.log(`Info: ${stdout.toString()}`)
-		  OS.exec('pm2 restart all')
+		  //OS.exec('pm2 restart all')
 		}
 	  })	
 }

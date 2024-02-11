@@ -6,9 +6,9 @@
         Di @{model.authorName} - @{model.date}
     </div>
     <figure>
-        @{image(model.img, 180, null, m.slug, 'vs-img vs-round')}
+        @{image(model.img, 180, null, model.slug, 'vs-img vs-round')}
     </figure>
     <section>
-        @{!m.content.rendered}        
+        @{!model.content.rendered}        
     </section>
 </article>
