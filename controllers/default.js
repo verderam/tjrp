@@ -9,19 +9,19 @@ exports.install = function() {
 };
 
 const posts = function(req,res){
-	const u=CONF.api+'/posts?_embed'
+	const u=CONF.api+'/posts?_embed&per_page=20'
 	const me = this; 
 	let model = {};
 	RESTBuilder.GET(u).callback(
 		function(err,resp){
 			for (i=0;i<resp.length;i++){
 				resp[i].img=''
-				console.log('emb: ', resp[i]["_embedded"])
+				//console.log('emb: ', resp[i]["_embedded"])
 				resp[i].img=resp[i]["_embedded"]["wp:featuredmedia"][0]["media_details"]["sizes"]["thumbnail"]["source_url"]
 			}
 			if (err) console.log('error: ',err);	
 			model.data=resp;
-			console.log('model: ',model);
+			//console.log('model: ',model);
 			me.view('posts', model);
 		}
 		);
@@ -30,7 +30,6 @@ const posts = function(req,res){
 const categories = function(){
 	console.log(CONF.api)
 	const u=CONF.api+'/categories'
-	//const u='https://www.pianetagenoa1893.net/wp-json/wp/v2/categories'
 	const me = this
 	let model = {}
 	RESTBuilder.GET(u).callback(
