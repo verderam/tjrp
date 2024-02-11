@@ -2,7 +2,7 @@ exports.install = function() {
 	ROUTE('GET /');
 	ROUTE('GET /posts', posts);
 	ROUTE('GET /categories', categories);
-	ROUTE('GET /_mods', _mods);
+	ROUTE('POST /_mods', _mods);
 	ROUTE('+POST /up/', up, ['upload'], 1024);
 	ROUTE('FILE /*.txt', staticTxt);
 	ROUTE('FILE /*.jpg', staticJpg);
