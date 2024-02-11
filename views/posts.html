@@ -9,7 +9,7 @@
                 <p>
                     @{!m.excerpt.rendered}
                     <figure>
-                        @{image(m["_embedded"]["wp:featuredmedia"][0]["source_url"], 320, null, m.slug, 'vs-img vs-round')}
+                        @{image(m["_embedded"]["wp:featuredmedia"][0]["media_details"]["sizes"]["thumbnail"]["source_url"], 180, null, m.slug, 'vs-img vs-round')}
                     </figure>
                 </p>
             </li>
