@@ -8,6 +8,9 @@
                 <h2>@{!m.title.rendered}</h2>
                 <p>
                     @{!m.excerpt.rendered}
+                    <figure>
+                        <img src="@{!m.jetpack_featured_media_url}" alt="@{slug}" />
+                    </figure>
                 </p>
             </li>
         @{end}
