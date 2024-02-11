@@ -1,0 +1,19 @@
+{
+	"name": "trp",
+	"description": "Teleradiopace TV",
+	"version": "1.0.0",
+	"main": "index.js",
+	"dependencies": {
+		"total4": "0.0.95"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test\" && exit 1",
+		"start" : "index.js"
+	},
+	"keywords": [
+		"trp",
+		"sito"
+	],
+	"author": "VS",
+	"license": "MIT"
+}

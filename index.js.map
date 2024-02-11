@@ -1,0 +1,27 @@
+{
+	"routes": [
+		{
+			"method": "POST",
+			"url": "/up/",
+			"auth": 1,
+			"owner": "controller_default",
+			"upload": true,
+			"limit": 1024
+		},
+		{
+			"method": "GET",
+			"url": "/",
+			"owner": "controller_default"
+		},
+		{
+			"method": "GET",
+			"url": "/posts/",
+			"owner": "controller_default"
+		},
+		{
+			"method": "GET",
+			"url": "/categories/",
+			"owner": "controller_default"
+		}
+	]
+}
