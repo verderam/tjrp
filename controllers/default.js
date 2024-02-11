@@ -18,9 +18,11 @@ const posts = function(req,res){
 	let model = {};
 	RESTBuilder.GET(u).callback(
 		function(err,resp){
+			for (i=0;i<resp.length;i++){
+				resp[i].img=resp[i]["_embedded"]["wp:featuredmedia"][0]["media_details"]["sizes"]["thumbnail"]["source_url"]
+			}
 			if (err) console.log('error: ',err);	
 			model.data=resp;
-
 			console.log('model: ',model);
 			me.view('posts', model);
 		}
