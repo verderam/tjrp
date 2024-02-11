@@ -2,7 +2,7 @@
     <h2>
         Articoli
     </h2>
-    <ul class="vs-borderd vs-list">
+    <ol class="lst">
         @{foreach var m in model.data}
             <li>
                 <h2>@{!m.title.rendered}</h2>
@@ -14,5 +14,5 @@
                 </p>
             </li>
         @{end}
-    </ul>
+    </ol>
 </article>
