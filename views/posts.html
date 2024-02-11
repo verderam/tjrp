@@ -3,8 +3,8 @@
         Articoli
     </h2>
     <ol>
-        @{foreach var m in model}
-            <li>@{m}</li>
+        @{foreach var m in model.data}
+            <li>@{m.id}</li>
         @{end}
     </ol>
 </article>
