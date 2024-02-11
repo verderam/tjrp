@@ -4,7 +4,12 @@
     </h2>
     <ol>
         @{foreach var m in model.data}
-            <li>@{m.id}</li>
+            <li>
+                <h2>@{m.title.rendered}</h2>
+                <p>
+                    @{m.excerpt.rendered}
+                </p>
+            </li>
         @{end}
     </ol>
 </article>
