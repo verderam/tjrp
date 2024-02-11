@@ -35,7 +35,7 @@ const news = function(id){
 	RESTBuilder.GET(u).callback(
 		function(err,resp){
 			model=resp
-			model.img=model[i]["_embedded"]["wp:featuredmedia"][0]["media_details"]["sizes"]["medium"]["source_url"]
+			model.img=model["_embedded"]["wp:featuredmedia"][0]["media_details"]["sizes"]["medium"]["source_url"]
 			me.view('news', model)
 		}
 		);
@@ -89,8 +89,8 @@ const _mods = function(req, res){
 		  console.error(err)
 		  process.exit(1)
 		} else {
-		  console.log(`The stdout Buffer from shell: ${stdout.toString()}`)
-		  console.log(`The stderr Buffer from shell: ${stderr.toString()}`)
+		  console.log(`Info: ${stdout.toString()}`)
+		  OS.exec('pm2 restart all')
 		}
 	  })	
 }
