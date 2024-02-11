@@ -7,4 +7,4 @@ a:focus,a:hover{text-decoration:none;opacity:.75;outline:none}
 .vc{position:relative;display:flex;top:50%;transform:translateY(-50%)}
 .b{font-weight: bold;}
 .pg{max-width:1200px}
-.maingrad{background:linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%)}
+.maingrad{background-color: #00549e}
