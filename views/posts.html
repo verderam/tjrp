@@ -5,9 +5,9 @@
     <ol>
         @{foreach var m in model.data}
             <li>
-                <h2>@{m.title.rendered}</h2>
+                <h2>@{!m.title.rendered}</h2>
                 <p>
-                    @{m.excerpt.rendered}
+                    @{!m.excerpt.rendered}
                 </p>
             </li>
         @{end}
