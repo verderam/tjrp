@@ -13,7 +13,7 @@ exports.install = function() {
 
 const posts = function(req,res){
 	console.log(CONF.api)
-	const u=CONF.api+'/posts'
+	const u=CONF.api+'/posts?_embed'
 	const me = this; 
 	let model = {};
 	RESTBuilder.GET(u).callback(

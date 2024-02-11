@@ -9,7 +9,7 @@
                 <p>
                     @{!m.excerpt.rendered}
                     <figure>
-                        @{image(CONF.api+'/media/'+m.featured_media, 320, null, m.slug, 'vs-img vs-round')}
+                        @{image(m["_embedded"]["wp:featuredmedia"][0]["source_url"], 320, null, m.slug, 'vs-img vs-round')}
                     </figure>
                 </p>
             </li>
