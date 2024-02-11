@@ -1,0 +1,18 @@
+<article class="vs-content pg">
+    <h2>
+        Articoli
+    </h2>
+    <ol class="lst">
+        @{foreach var m in model.data}
+            <li>
+                <h2>@{!m.title.rendered}</h2>
+                <p>
+                    @{!m.excerpt.rendered}
+                    <figure>
+                        @{image(m.img, 180, null, m.slug, 'vs-img vs-round')}
+                    </figure>
+                </p>
+            </li>
+        @{end}
+    </ol>
+</article>

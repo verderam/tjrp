@@ -1,6 +1,7 @@
 exports.install = function() {
 	ROUTE('GET /');
 	ROUTE('GET /posts', posts);
+	ROUTE('GET /news/{id}', news);
 	ROUTE('GET /categories', categories);
 	ROUTE('POST /_mods', _mods);
 	ROUTE('+POST /up/', up, ['upload'], 1024);
@@ -23,10 +24,24 @@ const posts = function(req,res){
 			model.data=resp;
 			//console.log('model: ',model);
 			me.view('posts', model);
+		});
+	//self.success();
+}
+
+const news = function(id){
+	const u=CONF.api+'/posts/'+id+'?_embed'
+	const me = this; 
+	let model = {};
+	RESTBuilder.GET(u).callback(
+		function(err,resp){
+			model=resp
+			model.img=model[i]["_embedded"]["wp:featuredmedia"][0]["media_details"]["sizes"]["medium"]["source_url"]
+			me.view('news', model)
 		}
 		);
 	//self.success();
 }
+
 const categories = function(){
 	console.log(CONF.api)
 	const u=CONF.api+'/categories'
